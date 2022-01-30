@@ -1,5 +1,3 @@
 # fortran solvers for lid driven cavity problem : 
 
-1) the grid.f90 file creates the m x n mesh (staggered and non-uniform) 
-2) the lid_driven_convection.f90 file is responsible to implement the fluid simulations by using rhei - chow interpolation for momentum and quick upwind scheme , treatment of the viscous terms is implicit, the order of accuracy is 4.
- 
+we implemented the grid generation code in fortran ; the grid to be used is the cartesian non-uniform grid. we have incorporated the Rhie and Chow momentum interpolation scheme in the code to help avoid any kind of chequerboard oscillations in the pressure field (caused due to rapid switching between two parallel pressure field solutions) 
